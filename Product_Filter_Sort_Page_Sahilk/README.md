@@ -23,7 +23,7 @@ This project is a product listing page for Casio watches with filtering, sorting
 
 ## File Overview
 
-### 1. `index.html`
+### 1. `product_sort.html`
 - Main HTML file containing the structure and elements:
   - A header with a title and sorting dropdown.
   - Filters for price, size, and functions.
