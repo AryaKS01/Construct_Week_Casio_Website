@@ -115,3 +115,19 @@ main {
     font-size: 1.2em;
     font-weight: bold;
 }
+
+
+.buy-now {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.buy-now:hover {
+    background-color: #e0554c;
+}

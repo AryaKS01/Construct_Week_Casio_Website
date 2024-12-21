@@ -136,11 +136,20 @@
                 codeElement.className = 'code';
                 codeElement.textContent = watch.code;
 
+                const buyButton = document.createElement('button');
+                buyButton.className = 'buy-now';
+                buyButton.textContent = 'Buy Now';
+                buyButton.addEventListener('click', () => {
+                alert(`You have purchased ${watch.code} for ₹${watch.price}!`);
+              });
+
                 watchElement.appendChild(imageElement);
                 watchElement.appendChild(brandElement);
                 watchElement.appendChild(priceElement);
                 watchElement.appendChild(codeElement);
                 watchesList.appendChild(watchElement);
+                watchElement.appendChild(buyButton);
+
             });
 
             updatePagination(filteredWatches.length);
