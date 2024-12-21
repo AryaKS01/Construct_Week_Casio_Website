@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body {
+body {
 font-family: Arial, sans-serif;
 background-color: rgb(253, 253, 255);
 min-height: 100vh;
@@ -221,7 +221,7 @@ flex: 1; /* Allow container to take available space */
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+}
   .tabs {
     display: flex;
     justify-content: space-between;
@@ -572,9 +572,60 @@ margin-top: 20px;
 }
 
 .btn:hover {
-background-color: #0056b3;
+background-color: #5c5f63;
 }
 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tabs {
+    display: none;
+  }
+
+  .tab {
+    padding: 15px;
+  }
+
+  .cart-items li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-items li span {
+    margin-top: 5px;
+  }
+
+  .address-form input {
+    width: 100%;
+  }
+
+  /* Sync button colors across tabs */
+  .tab:hover, .btn:hover {
+    background-color: aqua;
+    color: black;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ensure consistent color changes on mobile */
+  .tab:hover, .btn:hover {
+    background-color: aqua;
+    color: black;
+  }
+} 
 
 /* footer CSS */
 
@@ -674,3 +725,4 @@ footer {
   color: #888;
   margin: 10px 0 0;
 }
+

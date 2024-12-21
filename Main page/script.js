@@ -319,8 +319,16 @@ fetch('https://casi-ea3bd-default-rtdb.firebaseio.com/category.json')
     // Show alert
     // alert('Item added to cart');
   
-    // Redirect to checkout.html
-    window.location.href = 'checkout/checkout.html';
-  }
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+
+// Check if the checkout page has already been opened in a new tab
+const hasOpenedCheckout = localStorage.getItem('hasOpenedCheckout');
+
+
+  window.open('checkout.html', '_blank');
+
+}
+
+  
   
 

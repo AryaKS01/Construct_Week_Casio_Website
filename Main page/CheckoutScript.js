@@ -123,6 +123,36 @@ document.querySelectorAll('.tab').forEach(tab => {
   });
 });
 
+
+function placeOrder() {
+  const cardName = document.getElementById('card-name').value.trim();
+  const cardNumber = document.getElementById('card-number').value.trim();
+  const cvv = document.getElementById('cvv').value.trim();
+
+  // Simple validation checks
+  if (!cardName || !cardNumber || !cvv) {
+    alert('Please fill in all the fields correctly.');
+    return;
+  }
+
+  // Clear the cart in localStorage and the cartItems array
+  localStorage.removeItem('cart'); // Remove the cart from localStorage
+  cartItems.length = 0; // Clear the cartItems array
+
+  // Show success message after 1 second
+  const orderMessage = document.getElementById('order-message');
+  setTimeout(() => {
+    orderMessage.style.display = 'block';
+    orderMessage.textContent = 'Order successful!';
+  }, 1000);
+
+  // Redirect to main.html after showing the message
+  setTimeout(() => {
+    window.location.href = 'Main.html';
+  }, 3000);
+}
+
+
 // Initial rendering of cart items and order summary
 renderCartItems();
 renderOrderSummary();
@@ -221,3 +251,35 @@ searchBox.addEventListener('focus', function () {
 fullscreenSearchInput.addEventListener('blur', function () {
     fullscreenSearchElement.classList.remove('active');
 });
+
+
+
+function placeOrder() {
+  const cardName = document.getElementById('card-name').value.trim();
+  const cardNumber = document.getElementById('card-number').value.trim();
+  const cvv = document.getElementById('cvv').value.trim();
+
+  // Simple validation checks
+  if (!cardName || !cardNumber || !cvv) {
+    alert('Please fill in all the fields correctly.');
+    return;
+  }
+
+  // Show success message after 1 second
+  const orderMessage = document.getElementById('order-message');
+  setTimeout(() => {
+    orderMessage.style.display = 'block';
+    orderMessage.textContent = 'Order successful!';
+  }, 1000);
+
+  // Redirect to main.html after showing the message
+  setTimeout(() => {
+    window.location.href = 'Main.html';
+  }, 3000);
+}
+
+// Ensure the onclick is set programmatically as a fallback
+document.querySelector('.btn').onclick = function () {
+  placeOrder();
+};
+
