@@ -1,54 +1,56 @@
-# Casio Product Filter Sort Page
+# Casio Watch Filter and Pagination Project
 
-This project is a product listing page for Casio watches with filtering, sorting, and pagination functionality. It allows users to browse watches stored in a Firebase Realtime Database and provides an interactive interface for a seamless shopping experience.
-
----
+## Overview
+A dynamic web application that replicates the Casio watch shopping experience with advanced filtering, sorting, and pagination capabilities. Built with HTML, CSS, and JavaScript, integrated with Firebase Realtime Database.
 
 ## Features
 
-### 1. Sorting
-- **Sort by Name**: Alphabetically sorts watches by their code.
-- **Sort by Price**: Sorts watches by price in ascending order.
+### Navigation
+- Responsive top navigation bar
+- Categories including BEST SELLERS, New Drops, FULL METAL, etc.
+- Active state indicators for current category
 
-### 2. Filtering
-- **Price Range**: Filters watches based on selected price ranges.
-- **Size**: Filters watches by size (Small, Medium, Large).
-- **Functions**: Filters watches by available functions (e.g., Bluetooth, Solar, Water Resistant).
+### Product Filtering
+- **Sort Options:**
+  - Newest
+  - Price: High to Low
+  - Price: Low to High
+  - Weight: Heavy to Light
+  - Weight: Light to Heavy
 
-### 3. Pagination
-- Displays 5 watches per page.
-- Navigate between pages using "Previous" and "Next" buttons.
+- **Price Range Filters:**
+  - Below ₹5000
+  - ₹5000 - ₹10000
+  - ₹10000 - ₹20000
+  - ₹20000 - ₹30000
+  - ₹30000 - ₹40000
+  - ₹40000 - ₹50000
+  - Above ₹50000
 
----
+### Product Display
+- Grid layout with responsive design
+- Product cards featuring:
+  - Product image
+  - G-SHOCK branding
+  - Product code
+  - Price with tax information
+  - Wishlist heart icon
+  - Buy Now button
 
-## File Overview
+### Firebase Integration
+- Real-time data fetching
+- Dynamic product loading
+- Secure configuration
 
-### 1. `product_sort.html`
-- Main HTML file containing the structure and elements:
-  - A header with a title and sorting dropdown.
-  - Filters for price, size, and functions.
-  - A section for displaying watches and pagination controls.
-  - Firebase configuration and JavaScript logic.
+## Technical Stack
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Firebase Realtime Database
+- Firebase Authentication
 
-### 2. `product_sort.css`
-- Stylesheet for designing the page, including the header, filters, and product cards. *(Note: CSS file is not included in the provided code, so ensure it's added.)*
+## Setup Instructions
 
-### 3. Firebase Integration
-- Uses Firebase Realtime Database to fetch watch data.
-- Firebase SDKs are loaded for app initialization and database interaction.
-
----
-
-## Firebase Configuration
-
-Ensure that Firebase is set up with the following configuration:
-
-```javascript
-const firebaseConfig = {
-    apiKey: "AIzaSyBERuOH-3GvNnYxWSHMMKgBk0hRQ4D5O-U",
-    authDomain: "casio-product-sort-page.firebaseapp.com",
-    projectId: "casio-product-sort-page",
-    storageBucket: "casio-product-sort-page.firebasestorage.app",
-    messagingSenderId: "952840620124",
-    appId: "1:952840620124:web:7e6bb7245330c5f4463e99"
-};
+1. **Clone the Repository**
+```bash
+git clone [repository-url]
