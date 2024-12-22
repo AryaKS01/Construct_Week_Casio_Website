@@ -57,20 +57,8 @@
       </ul>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="container">
-    <!-- Tabs Navigation -->
+    <!-- Tabs Navigation  -->
     <div class="tabs">
       <div class="tab active" data-tab="cart">Your Cart</div>
       <div class="tab" data-tab="address">Address</div>
@@ -140,7 +128,9 @@
           <div class="right border" id="order-summary">
             <h3>Order Summary</h3>
             <ul id="order-summary-items" class="order-summary-list"></ul>
-            <button class="btn">Place order</button>
+            <button class="btn" onclick="placeOrder()">Place Order</button>
+            <p id="order-message" class="text-success" style="display: none; margin-top: 10px;">Order successful!</p>
+
             <p class="text-muted text-center">Complimentary Shipping & Returns</p>
           </div>
         </div>        
