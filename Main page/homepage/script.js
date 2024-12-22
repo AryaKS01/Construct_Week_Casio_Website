@@ -258,7 +258,7 @@ fetch('https://casi-ea3bd-default-rtdb.firebaseio.com/category.json')
 const hasOpenedCheckout = localStorage.getItem('hasOpenedCheckout');
 
 
-  window.open('Checkout/checkout', '_blank');
+  window.open('../Checkout/checkout.html', '_blank');
 
 }
 
