@@ -256,6 +256,16 @@ fullscreenSearchInput.addEventListener('blur', function () {
 
 function placeOrder() {
 
+  const cardName = document.getElementById('card-name').value.trim();
+  const cardNumber = document.getElementById('card-number').value.trim();
+  const cvv = document.getElementById('cvv').value.trim();
+
+  // Simple validation checks
+  if (!cardName || !cardNumber || !cvv) {
+    alert('Please fill in all the fields correctly.');
+    return;
+  }
+
 
   // Show success message after 1 second
   const orderMessage = document.getElementById('order-message');
@@ -266,7 +276,7 @@ function placeOrder() {
 
   // Redirect to main.html after showing the message
   setTimeout(() => {
-    window.location.href = 'Main.html';
+    window.location.href = '../homepage/Main.html';
   }, 3000);
 }
 
