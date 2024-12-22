@@ -164,14 +164,14 @@
 
         .btn {
 
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+         display: block;
+         width: 100%;
+         padding: 12px;
+         margin-bottom: 10px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         font-size: 16px;
 }
 
     </style>
@@ -231,14 +231,14 @@
     </div>
 
     <script>
-        // Simple form validation for the registration form
+
         function validateRegistration() {
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
             let valid = true;
 
-            // Email Validation
+            // Validate email, password, confirm password...
             const emailError = document.getElementById('emailError');
             if (!isValidEmail(email)) {
                 emailError.textContent = "Please enter a valid email.";
@@ -247,7 +247,6 @@
                 emailError.textContent = "";
             }
 
-            // Password Validation
             const passwordError = document.getElementById('passwordError');
             if (!isValidPassword(password)) {
                 passwordError.textContent = "Password must be at least 8 characters and include a mix of letters and numbers.";
@@ -256,7 +255,6 @@
                 passwordError.textContent = "";
             }
 
-            // Confirm Password Validation
             const confirmPasswordError = document.getElementById('confirmPasswordError');
             if (password !== confirmPassword) {
                 confirmPasswordError.textContent = "Passwords do not match.";
@@ -265,27 +263,30 @@
                 confirmPasswordError.textContent = "";
             }
 
-            // If any field is invalid, prevent form submission
             if (!valid) {
                 return false;
             }
 
-            // Simulate successful registration process (for demonstration)
+            // Save data in localStorage
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password);
+
             alert("Registration successful!");
-            return true;
+            window.location.href = "login.html"; // Redirect to login page after successful registration
+            return false;
         }
 
-        // Validate Email format
         function isValidEmail(email) {
             const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
             return regex.test(email);
         }
 
-        // Validate Password strength
         function isValidPassword(password) {
             const regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
             return regex.test(password);
         }
+
+        
     </script>
 
 </body>
