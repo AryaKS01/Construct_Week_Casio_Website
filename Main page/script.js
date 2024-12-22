@@ -19,14 +19,6 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 // Stop autoplay when next or prev button is clicked
-// document.querySelector(".swiper-button-next").addEventListener("click", function () {
-//   swiper.autoplay.stop();
-// });
-
-// document.querySelector(".swiper-button-prev").addEventListener("click", function () {
-//   swiper.autoplay.stop();
-// });
-
 
 document.querySelector('.swiper-button-next').addEventListener('click', () => {
   swiperInstance.loopDestroy(); // Stops the loop
@@ -214,65 +206,6 @@ var categorySwiper = new Swiper('#drop-swiper-container', {
     },
   },
 });
-
-// // Fetch Category Data and Add Slides Dynamically
-// fetch('https://casi-ea3bd-default-rtdb.firebaseio.com/category.json')
-//   .then(response => response.json())
-//   .then(categories => {
-//     const categoryWrapper = document.getElementById('category-swiper-wrapper');
-//     categories.forEach(category => {
-//       const slide = document.createElement('div');
-//       slide.className = 'swiper-slide';
-//       slide.innerHTML = `
-//         <div class="category-card">
-//           <img src="${category.img}" alt="${category.name}" class="category-image" />
-//           <h3 class="category-name">${category.name}</h3>
-//           <p class="category-about">${category.about}</p>
-//         </div>
-//       `;
-//       categoryWrapper.appendChild(slide);
-//     });
-//     categorySwiper.update(); // Update Swiper after adding slides
-//   })
-//   .catch(error => console.error('Error fetching data:', error));
-
-
-
-// Fetch category data and display
-// fetch('https://casi-ea3bd-default-rtdb.firebaseio.com/category.json')
-//   .then(response => response.json())
-//   .then(categories => {
-//     const categoryWrapper = document.getElementById('category-swiper-wrapper');
-//     categories.forEach(category => {
-//       // Random price between 15000 and 25000
-//       const randomPrice = Math.floor(Math.random() * (25000 - 15000 + 1)) + 15000;
-
-//       const slide = document.createElement('div');
-//       slide.className = 'swiper-slide';
-//       slide.innerHTML = `
-//         <div class="category-card">
-//           <img src="${category.img}" alt="${category.name}" class="category-image" />
-//           <h3 class="category-name">${category.name}</h3>
-//           <p class="category-about">${category.about}</p>
-//           <p class="category-price">₹${randomPrice}</p>
-//           <button class="btn btn-primary" onclick="addToCart('${category.id}', '${category.name}', '${category.img}', ${randomPrice})">Buy Now</button>
-//         </div>
-//       `;
-//       categoryWrapper.appendChild(slide);
-//     });
-//       categorySwiper.update(); // Update Swiper after adding slides
-//   })
-//   .catch(error => console.error('Error fetching data:', error));
-
-// // Add item to cart in localStorage
-// function addToCart(id, name, img, price) {
-//   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-//   const cartItem = { id, name, img, price };
-//     cartItems.push(cartItem);
-//   localStorage.setItem('cart', JSON.stringify(cartItems));
-//   alert('Item added to cart');
-// }
-
 
 // Fetch category data and display
 fetch('https://casi-ea3bd-default-rtdb.firebaseio.com/category.json')
