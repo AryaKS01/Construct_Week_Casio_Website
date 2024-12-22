@@ -165,7 +165,10 @@ function displayWatches(filteredWatches) {
         buyButton.className = 'buy-now';
         buyButton.textContent = 'Buy Now';
         buyButton.addEventListener('click', () => {
-            alert(`You have purchased ${watch.code} for ₹${watch.price}!`);
+            // Save to localStorage
+            saveToCart(watch);
+            // Redirect to checkout page
+            window.location.href = 'Construct_Week_Casio_Website\Main page\checkout.html';
         });
 
         watchElement.appendChild(wishlistIcon);
@@ -178,6 +181,30 @@ function displayWatches(filteredWatches) {
         watchElement.appendChild(buyButton); // Add the button to the card
     });
 }
+
+
+
+// Function to save to localStorage
+function saveToCart(watch) {
+    // Get existing cart items or initialize empty array
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Add new item
+    cartItems.push({
+        code: watch.code,
+        price: watch.price,
+        image: watch.image,
+        brand: 'G-SHOCK',
+        quantity: 1
+    });
+    
+    // Save back to localStorage
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+}
+
+
+
+
 
 // Add event listeners for radio buttons
 document.querySelectorAll('.radio-group input[type="radio"]').forEach(radio => {
