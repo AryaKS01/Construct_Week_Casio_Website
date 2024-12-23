@@ -28,11 +28,11 @@ Construct_Week_Casio_Website/
 
 ## Video Walkthrough of the Project
 
-- [Walkthrough of the Project](./Video/Walkthrough_of_the_Project.mp4)
+- [Walkthrough of the Project](https://drive.google.com/file/d/1yiAYv3t1dpUbJtCrBX7gbgv-tkxHlJqc/view?usp=sharing)
 
 ## Video Walkthrough of the Codebase
 
-- [Walkthrough of the Codebase](./Video/Walkthrough_of_the_Codebase.mp4)
+- [Walkthrough of the Codebase](https://drive.google.com/file/d/141bTs6u93XtpbvAbRHIEsc2k5VgLMXYt/view?usp=sharing)
 
 ## Features
 
