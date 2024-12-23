@@ -88,4 +88,4 @@ Not applicable; this is a frontend-only project without a backend.
 - **HTML**: Structure of the web pages.
 - **CSS**: Styling of the web pages.
 - **JavaScript**: Interactivity and dynamic content.
-- **Vercel**: Deployment platform for hosting the website.
+- **Netlify**: Deployment platform for hosting the website.
