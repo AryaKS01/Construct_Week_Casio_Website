@@ -10,7 +10,7 @@ Frontend
 
 ## Deployed App
 
-Frontend: [https://bright-seahorse-020d73.netlify.app/](https://casio-clone-12.netlify.app/)
+Frontend: [Casio Clone](https://beamish-swan-e2cb71.netlify.app/)
 
 ## Directory Structure
 
